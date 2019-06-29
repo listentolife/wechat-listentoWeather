@@ -1,0 +1,70 @@
+<wxs src="./index.wxs" module="tools" />
+<!--index.wxml-->
+<view class="container">
+  <view class='info-wrapper'>
+    <view class='location-wrapper'>
+      <text class='district'>{{location.district}}</text>
+      <text class='street'>{{location.street}}</text>
+    </view>
+    <view class='data-wrapper'>
+      <text class='update'>{{now.update.loc}} 更新</text>
+      <text class='source'>来源：和风天气</text>
+    </view>
+  </view>
+
+  <view class='now-wrapper'>
+    <text class='tmp'>{{now.now.tmp}}<text class='tmp-unit'>℃</text></text>
+    <text class='desc'>{{now.now.cond_txt}}</text>
+    <text class='wind'>{{now.now.wind_dir}}</text>
+    <view class='now-detail'>
+      <text>体感温度：{{now.now.fl}}℃</text>
+      <text>风向：{{now.now.wind_deg}}°</text>
+      <text>风力：{{now.now.wind_sc}}级</text>
+      <text>风速：{{now.now.wind_spd}}km/h</text>
+      <text>相对湿度：{{now.now.hum}}%</text>
+      <text>降水量：{{now.now.pcpn}}mm</text>
+      <text>气压：{{now.now.pres}}Pa</text>
+      <text>能见度：{{now.now.vis}}km</text>
+      <text>云量：{{now.now.cloud}}</text>
+    </view>
+  </view>
+
+  <view class='forecast-wrapper'>
+    <view
+      wx:for="{{ forecast.daily_forecast }}"
+      wx:for-index="index"
+      wx:for-item="item"
+      wx:key="item.date"
+      class='forecast-item'
+    >
+      <text class='date'>{{tools.sub(item.date)}}</text>
+      <text class='tmp'>{{item.tmp_max}}~{{item.tmp_min}}℃</text>
+      <text class='desc'>{{item.cond_txt_d}}</text>
+      <text class='wind'>{{item.wind_dir}}</text>
+    </view>
+  </view>
+
+  <view class='lifestyle-wrapper'>
+    <view
+      wx:for="{{ lifestyle.lifestyle }}"
+      wx:for-index="index"
+      wx:for-item="item"
+      wx:key="item.type"
+      class='lifestyle-item'
+    >
+      <view class='lifestyle-title'>
+        <text class='title'>{{tools.lifestyleChangeTxt(item.type)}}</text>
+      </view>
+      <view class='lifestyle-desc'>
+        <text class='lifestyle-brf'>{{item.brf}}</text>
+        <text class='lifestyle-txt'>{{item.txt}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='footer'>
+    <text>作者: listentolife</text>
+    <text>版本: 0.1.0</text>
+    <text>时间: 2019年6月27日</text>
+  </view>
+</view>

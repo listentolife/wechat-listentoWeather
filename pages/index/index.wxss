@@ -1,0 +1,130 @@
+/**index.wxss**/
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-wrapper, .data-wrapper {
+  padding: 20rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.district {
+  font-size: 50rpx;
+}
+
+.update, .source {
+  padding: 10rpx 0;
+  font-size: 20rpx;
+  text-align: right;
+}
+
+.now-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.now-wrapper .tmp {
+  padding: 20rpx 0;
+  font-size: 120rpx;
+}
+
+.now-wrapper .tmp-unit {
+  font-size: 30rpx;
+}
+
+.now-wrapper .desc, .now-wrapper .wind {
+  padding: 15rpx 0;
+  font-size: 30rpx;
+}
+
+.now-detail {
+  padding: 40rpx 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30rpx;
+  justify-content: space-around;
+}
+
+.now-detail text {
+  margin: 20rpx 0;
+  width: 30%;
+}
+
+.forecast-wrapper {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.forecast-item {
+  padding: 20rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 30%;
+  text-align: center;
+}
+
+.forecast-item .date, .forecast-item .tmp, .forecast-item .desc, .forecast-item .wind {
+  padding: 20rpx;
+  font-size: 30rpx;
+}
+
+.lifestyle-wrapper {
+  margin: 15rpx 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.lifestyle-item {
+  padding: 30rpx;
+  margin-bottom: 5rpx;
+  height: 230rpx;
+  display: flex;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.lifestyle-title {
+  padding: 0 20rpx;
+  /* flex-grow: 1; */
+  width: 30%;
+  font-size: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.lifestyle-desc {
+  padding: 0 10rpx;
+  width: 60%;
+  /* flex-grow: 2; */
+  display: flex;
+  flex-direction: column;
+}
+
+.lifestyle-brf {
+  font-size: 40rpx;
+  padding-bottom: 10rpx;
+}
+
+.lifestyle-txt {
+  font-size: 30rpx;
+}
+
+.footer {
+  padding-top: 100rpx; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20rpx;
+}
+
+.footer text {
+  margin-bottom: 20rpx;
+}
